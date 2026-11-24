@@ -1,123 +1,65 @@
-# Projet SI Java — Groupe X
+# Projet SI Java - ESIEE-IT (2026-2027)
 
-Projet pédagogique de SI Java réalisé en L2 à ESIEE-IT, année 2026–2027.
+## Contexte
 
-## Objectif
+Projet SI en Java : construire une API backend propre, structurée, documentée et testée, avec un workflow Git proche entreprise.
 
-Construire progressivement une application Java organisée en couches, avec des tests automatisés et un travail collaboratif sous Git. Le projet prépare une future API Spring.
+## Objectifs
 
-Le sujet métier et les fonctionnalités seront précisés dans le [backlog](BACKLOG.md).
+- Mettre en place un dépôt Git propre (main/develop/feature)
+- Implémenter un MVP (auth + gestion de ressources métier)
+- Respecter une architecture claire (controller/service/repository)
+- Ajouter des tests unitaires
+- Produire une documentation exploitable (README + backlog)
 
 ## Équipe
 
-- Groupe : X — à remplacer par le numéro du groupe.
-- Membres : noms et rôles à compléter par l’équipe.
+- Nom Prénom - rôle (PO / Lead Dev / Dev / QA)
+- Nom Prénom - rôle
+- Nom Prénom - rôle
 
-## Prérequis
+## Stack
 
-- **JDK 21**, avec les commandes `java` et `javac` disponibles.
-- **Git** et, sous Windows, **Git Bash** pour les commandes ci-dessous.
-- Une connexion Internet pour le premier téléchargement de Gradle et des dépendances.
-- IntelliJ IDEA est recommandé pour le développement.
-
-Le wrapper **Gradle 8.14.3** est fourni : aucune installation globale de Gradle n’est nécessaire.
-
-Vérifier Java :
-
-```bash
-java -version
-javac -version
-```
-
-Les deux commandes doivent indiquer une version 21. `JAVA_HOME`, s’il est défini, doit pointer vers le JDK 21.
+- Java 21
+- Gradle (wrapper)
+- JUnit 5
+- (à venir) Spring Boot, DB, Docker
 
 ## Installation
 
-```bash
-git clone https://github.com/asim-brss/esieeit-projet-si-java-groupe--X-.git
-cd esieeit-projet-si-java-groupe--X-
-./gradlew --version
-```
+### Prérequis
 
-Dans IntelliJ, ouvrir le **dossier racine contenant `settings.gradle` et `build.gradle`**, puis laisser la synchronisation Gradle se terminer. Utiliser un JDK 21 pour le projet et la JVM Gradle.
+- Java 21
+- Git
 
-## Exécuter l’application
-
-Depuis la racine du dépôt, dans Git Bash :
+### Cloner
 
 ```bash
-./gradlew run
+git clone <URL>
+cd <repo>
 ```
 
-Le point d’entrée est `com.esiee.project.App`. L’application actuelle s’exécute dans la console.
+## Lancer
 
-## Tests et compilation
-
-Exécuter les tests JUnit 5 :
+### Tests
 
 ```bash
 ./gradlew test
 ```
 
-Le rapport HTML se trouve dans `build/reports/tests/test/index.html`.
-
-Compiler et lancer les vérifications :
+### Run (si application Gradle)
 
 ```bash
-./gradlew build
+./gradlew run
 ```
-
-Sous PowerShell, utiliser `./gradlew.bat` à la place de `./gradlew`.
-
-## Structure du projet
-
-```text
-src/
-├── main/java/com/esiee/project/
-│   ├── App.java
-│   ├── api/
-│   │   ├── controller/
-│   │   └── dto/
-│   ├── domain/
-│   │   ├── model/
-│   │   └── enums/
-│   ├── service/
-│   ├── repository/
-│   └── exception/
-└── test/java/com/esiee/project/
-    └── AppTest.java
-```
-
-Les packages destinés à la future API sont préparés ; leurs fonctionnalités seront ajoutées au fil des séances.
 
 ## Workflow Git
 
-1. Partir d’une branche principale à jour et créer une branche par tâche :
-
-   ```bash
-   git switch -c feature/nom-de-la-tache
-   ```
-
-2. Réaliser une modification ciblée, puis lancer `./gradlew test`.
-3. Examiner les changements et sélectionner les fichiers à inclure :
-
-   ```bash
-   git status
-   git diff
-   git add chemin/du/fichier
-   git diff --cached
-   ```
-
-4. Enregistrer un commit explicite :
-
-   ```bash
-   git commit -m "Décrit la modification réalisée"
-   ```
-
-5. Lors du partage sur GitHub, faire relire la branche dans une pull request avant de la fusionner dans la branche principale.
-
-Ne pas versionner les secrets, les sorties de compilation ou la configuration locale de l’IDE.
+- **main** : stable
+- **develop** : intégration
+- **feature/*** : 1 user story = 1 branche
+- PR obligatoire vers develop
 
 ## Backlog
 
-Les tâches et fonctionnalités à réaliser sont suivies dans [BACKLOG.md](BACKLOG.md).
+Voir `BACKLOG.md`.
