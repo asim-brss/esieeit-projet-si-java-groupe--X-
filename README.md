@@ -1,2 +1,7 @@
 # esieeit-projet-si-java-groupe--X-
 Projet SI Java - L2 - 2026-2027 - ESIEE-IT
+ASIM BARLAS
+YASSINE EL KIYANE
+ANAS BOUZI
+MARWANE RACHDI 
+MATHIS KEZOUI
